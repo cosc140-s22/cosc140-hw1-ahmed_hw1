@@ -228,7 +228,7 @@ img {
   }
 }
 
-.gallery__img {
+.gallery_img {
   position: absolute;
   top: 0;
   left: 0vw;
@@ -236,41 +236,20 @@ img {
   transition: opacity 0.3s ease-in-out;
   width: 40vw;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 .thumbnail {
-=======
-.gallery__thumb {
->>>>>>> 8cdf05319aae911523b30a6c62c129d01c0497b1
-=======
-.gallery__thumb {
->>>>>>> 8cdf05319aae911523b30a6c62c129d01c0497b1
   padding-top: 0.5em;
   margin: 0.5em;
   margin-left: 0;
   display: block;
 }
-.gallery__selector {
+.gallery_selector {
   position: absolute;
   opacity: 0;
   visibility: hidden;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-.gallery__selector:checked + .gallery_img {
+.gallery_selector:checked + .gallery_img {
   opacity: 1;
 }
-.gallery__selector:checked ~ .thumbnail > img {
-=======
-=======
->>>>>>> 8cdf05319aae911523b30a6c62c129d01c0497b1
-.gallery__selector:checked + .gallery__img {
-  opacity: 1;
-}
-.gallery__selector:checked ~ .gallery__thumb > img {
-<<<<<<< HEAD
->>>>>>> 8cdf05319aae911523b30a6c62c129d01c0497b1
-=======
->>>>>>> 8cdf05319aae911523b30a6c62c129d01c0497b1
+.gallery_selector:checked ~ .thumbnail > img {
   box-shadow: 0 0 0 3px #0be2f6;
 }
