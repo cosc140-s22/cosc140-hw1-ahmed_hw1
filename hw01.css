@@ -1,0 +1,255 @@
+/* Variables */
+:root {
+  --navBgColor: #5a66a7;
+  --navLinkColor: #fff;
+  --pageBgColor: #242943;
+  --tbGreen: #56e078;
+  --tbRed: #f3827c;
+  --tbGrey: #d4d3d3;
+}
+
+/* PAGE STYLES */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue,
+    sans-serif;
+}
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body,
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--pageBgColor);
+}
+
+/* NAVIGATION STYLES */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  top: 0;
+  background-color: var(--navBgColor);
+}
+
+nav > div > h1 {
+  margin: 1.5rem 2.5rem;
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+  color: var(--navLinkColor);
+}
+
+nav ul {
+  display: flex;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+nav ul li a {
+  padding: 1.5rem 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.25s ease-out;
+  color: var(--navLinkColor);
+  text-decoration: none;
+}
+
+nav ul li a::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav ul li a::after {
+  right: 50%;
+  transform: translateX(50%);
+}
+
+nav ul li a::before,
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: var(--navLinkColor);
+  transition: width 0.1s ease-out;
+  position: absolute;
+  bottom: 0;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+  width: 100%;
+  transition-duration: 0.2s;
+}
+/* TABLE STYLES */
+.facts {
+  color: var(--navLinkColor);
+  text-align: center;
+}
+.facts_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100vw;
+}
+#header th {
+  background-color: var(--tbGreen);
+  width: 33%;
+}
+tr {
+  text-align: center;
+}
+th h1:hover {
+  transform: scale(1.1);
+}
+th h1 {
+  transition: ease-in 0.2s;
+}
+td,
+th {
+  border: solid 0.2rem black;
+}
+td img {
+  width: 500px;
+}
+td {
+  width: 33vw;
+  height: 19.8vw;
+  padding: 0;
+}
+#footer td {
+  height: 2.5vw;
+  border: 0;
+  background-color: var(--tbGrey);
+}
+.flip-card {
+  width: 33vw;
+  height: 19.8vw;
+  perspective: 1000px;
+}
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-back {
+  background-color: var(--tbRed);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* EXPERIENCES SECTION */
+
+.flex-container {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+}
+
+#experiences {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1em;
+  margin-left: 1em;
+  width: 50vw;
+  height: 35vw;
+  color: black;
+  background-color: rgb(230, 225, 220);
+}
+
+/* GALLERY */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+#gallery {
+  display: flex;
+  margin: 10px auto;
+  margin-left: 5em;
+  width: 50vw;
+  height: 35vw;
+  position: relative;
+  background-color: transparent;
+}
+@media screen and (min-width: 600px) {
+  #gallery {
+    padding-top: 400px;
+  }
+}
+
+.gallery__img {
+  position: absolute;
+  top: 0;
+  left: 0vw;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 40vw;
+}
+.gallery__thumb {
+  padding-top: 0.5em;
+  margin: 0.5em;
+  margin-left: 0;
+  display: block;
+}
+.gallery__selector {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+.gallery__selector:checked + .gallery__img {
+  opacity: 1;
+}
+.gallery__selector:checked ~ .gallery__thumb > img {
+  box-shadow: 0 0 0 3px #0be2f6;
+}
