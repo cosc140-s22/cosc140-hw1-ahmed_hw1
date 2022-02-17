@@ -228,7 +228,7 @@ img {
   }
 }
 
-.gallery_img {
+.gallery__img {
   position: absolute;
   top: 0;
   left: 0vw;
@@ -237,7 +237,11 @@ img {
   width: 40vw;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .thumbnail {
+=======
+.gallery__thumb {
+>>>>>>> 8cdf05319aae911523b30a6c62c129d01c0497b1
 =======
 .gallery__thumb {
 >>>>>>> 8cdf05319aae911523b30a6c62c129d01c0497b1
@@ -252,15 +256,21 @@ img {
   visibility: hidden;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .gallery__selector:checked + .gallery_img {
   opacity: 1;
 }
 .gallery__selector:checked ~ .thumbnail > img {
 =======
+=======
+>>>>>>> 8cdf05319aae911523b30a6c62c129d01c0497b1
 .gallery__selector:checked + .gallery__img {
   opacity: 1;
 }
 .gallery__selector:checked ~ .gallery__thumb > img {
+<<<<<<< HEAD
+>>>>>>> 8cdf05319aae911523b30a6c62c129d01c0497b1
+=======
 >>>>>>> 8cdf05319aae911523b30a6c62c129d01c0497b1
   box-shadow: 0 0 0 3px #0be2f6;
 }
