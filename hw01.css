@@ -35,13 +35,15 @@ body,
 }
 
 /* NAVIGATION STYLES */
-
 nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 10vh;
-  top: 0;
   background-color: var(--navBgColor);
 }
 
@@ -169,6 +171,7 @@ td {
 .flip-card-front,
 .flip-card-back {
   position: absolute;
+  z-index: 0;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
@@ -178,8 +181,14 @@ td {
   background-color: var(--tbRed);
   color: white;
   transform: rotateY(180deg);
+  padding-left: 1em;
+  padding-right: 1em;
 }
-
+.no_style {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
 /* EXPERIENCES SECTION */
 
 .flex-container {
