@@ -47,7 +47,7 @@ nav {
   background-color: var(--navBgColor);
 }
 
-nav > div > h1 {
+nav > div > a > h1 {
   margin: 1.5rem 2.5rem;
   display: inline-flex;
   position: relative;
@@ -147,6 +147,7 @@ td {
   border: 0;
   background-color: var(--tbGrey);
 }
+
 .flip-card {
   width: 33vw;
   height: 19.8vw;
@@ -178,7 +179,7 @@ td {
   backface-visibility: hidden;
 }
 .flip-card-back {
-  background-color: var(--tbRed);
+  background-color: #922618;
   color: white;
   transform: rotateY(180deg);
   padding-left: 1em;
@@ -189,6 +190,7 @@ td {
   color: white;
   font-weight: 700;
 }
+
 /* EXPERIENCES SECTION */
 
 .flex-container {
@@ -207,9 +209,15 @@ td {
   padding: 1em;
   margin-left: 1em;
   width: 50vw;
-  height: 35vw;
+  height: 40vw;
   color: black;
   background-color: rgb(230, 225, 220);
+}
+#experiences p {
+  font-size: 2em;
+}
+#experiences h1 {
+  font-size: 3em;
 }
 
 /* GALLERY */
@@ -241,12 +249,13 @@ img {
   position: absolute;
   top: 0;
   left: 0vw;
+  z-index: 0;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   width: 40vw;
 }
 .thumbnail {
-  padding-top: 0.5em;
+  padding-top: 100px;
   margin: 0.5em;
   margin-left: 0;
   display: block;
@@ -261,4 +270,14 @@ img {
 }
 .gallery_selector:checked ~ .thumbnail > img {
   box-shadow: 0 0 0 3px #0be2f6;
+}
+
+.gallery_item img {
+  width: 600px;
+  height: 500px;
+  transform: translateY(-10px);
+}
+.gallery_item label > img {
+  width: 120px;
+  height: 100px;
 }
