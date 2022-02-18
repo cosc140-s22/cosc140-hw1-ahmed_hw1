@@ -46,7 +46,9 @@ nav {
   height: 10vh;
   background-color: var(--navBgColor);
 }
-
+nav > div > a {
+  text-decoration: none;
+}
 nav > div > a > h1 {
   margin: 1.5rem 2.5rem;
   display: inline-flex;
